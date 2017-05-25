@@ -52,19 +52,19 @@ namespace _2048
             switch (e.KeyCode)
             {
                 case Keys.Up:
-                    isGameOver = game.makeTurn(Direction.Up);
+                    isGameOver = game.move(Direction.Up);
                     count_step++;
                     break;
                 case Keys.Down:
-                    isGameOver = game.makeTurn(Direction.Down);
+                    isGameOver = game.move(Direction.Down);
                     count_step++;
                     break;
                 case Keys.Left:
-                    isGameOver = game.makeTurn(Direction.Left);
+                    isGameOver = game.move(Direction.Left);
                     count_step++;
                     break;
                 case Keys.Right:
-                    isGameOver = game.makeTurn(Direction.Right);
+                    isGameOver = game.move(Direction.Right);
                     count_step++;
                     break;
             }
