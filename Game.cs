@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -164,7 +164,7 @@ namespace _2048
                 bool fieldChanged = clone.move(direction);
                 if (fieldChanged)
                 {
-                    return false;
+                    return true;
                 }
             }
             if (currentScore > bestScore)
