@@ -100,10 +100,6 @@ namespace _2048
                 ? new Func<int, int>(innerIndex => innerIndex + 1)
                 : new Func<int, int>(innerIndex => innerIndex - 1);
 
-            Func<int[,], int, int, int> getValue = isAlongRow
-                ? new Func<int[,], int, int, int>((x, i, j) => x[i, j])
-                : new Func<int[,], int, int, int>((x, i, j) => x[j, i]);
-
             Action<int[,], int, int, int> setValue = isAlongRow
                 ? new Action<int[,], int, int, int>((x, i, j, v) => x[i, j] = v)
                 : new Action<int[,], int, int, int>((x, i, j, v) => x[j, i] = v);
