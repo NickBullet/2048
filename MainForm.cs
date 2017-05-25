@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -113,22 +113,8 @@ namespace _2048
             }
         }
 
-        private void drawCellValue(Graphics graphics, int value, Point drawPosition)
-        {
-            if (value == 0)
-            {
-                throw new UnsopportedCellValueException("Zero must not be displayed.");
-            }
 
-            Font font = CellStyle.getFont(value);
-            Point margin = CellStyle.getValueMargin(value);
-            Brush brush = new SolidBrush(Color.White);
-            float x = drawPosition.X + margin.X;
-            float y = drawPosition.Y + margin.Y;
-            graphics.DrawString(value.ToString(), font, brush, x, y);
-        }
-
-        private void РЅР°Р·Р°РґToolStripMenuItem_Click(object sender, EventArgs e)
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (count_step >= 10)
             {
@@ -149,12 +135,12 @@ namespace _2048
             {
                 int func_act_after = 10;
                 if (count_step != 10 && count_step != 0)
-                    MessageBox.Show("Р”Р°РЅРЅР°СЏ С„СѓРЅРєС†РёСЏ СЃС‚Р°РЅРµС‚ РґРѕСЃС‚СѓРїРЅР° С‡РµСЂРµР·: " + (func_act_after - count_step) + " С…РѕРґРѕРІ");
+                    MessageBox.Show("Данная функция станет доступна через: " + (func_act_after - count_step) + " ходов");
             }
             gameField.Refresh();
         }
 
-        private void РѕРРіСЂРµToolStripMenuItem_Click(object sender, EventArgs e)
+        private void оИгреToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help form2 = new Help();
             form2.Show();
