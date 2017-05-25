@@ -18,12 +18,12 @@ namespace _2048
             { 8, Color.Chocolate },
             { 16, Color.Gray },
             { 32, Color.DarkSeaGreen },
-            { 64, Color.MediumPurple },
+            { 64, Color.Gold },
             { 128, Color.HotPink },
             { 256, Color.DarkOrange },
             { 512, Color.LightPink },
             { 1024, Color.DarkRed },
-            { 2048, Color.Gold },
+            { 2048, Color.Red },
             { 4096, Color.Navy },
             { 8192, Color.Teal },
         };
@@ -79,31 +79,5 @@ namespace _2048
         }
 
         public static Font getFont(int value)
-        {
-            const string familyName = "Times new roman";
-            const FontStyle fontStyle = FontStyle.Bold;
-            float size;
-
-            int digitCount = value.ToString().Length;
-            switch (digitCount)
-            {
-                case 1:
-                    size = 40.5f;
-                    break;
-                case 2:
-                    size = 40.5f;
-                    break;
-                case 3:
-                    size = 35.5f;
-                    break;
-                case 4:
-                    size = 30.5f;
-                    break;
-                default:
-                    throw new InvalidOperationException("Invalid cell value.");
-            }
-
-            return new Font(familyName, size, fontStyle);
-        }
     }
 }
