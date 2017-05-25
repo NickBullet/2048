@@ -69,7 +69,7 @@ namespace _2048
             } while (!isEmpty(row, column));
 
 
-            if (random.Next(1, 101) >= 90)
+            if (random.Next(100) >= 80)
             {
                 field[row, column] = 4;
             }
